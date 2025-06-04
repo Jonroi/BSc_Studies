@@ -10,4 +10,4 @@ This repository contains my Bachelor's degree studies and projects.
 
 ## Getting Started
 
-This repository will be updated throughout my studies with various materials and projects. 
+This repository will be updated throughout my studies with various materials and projects.
