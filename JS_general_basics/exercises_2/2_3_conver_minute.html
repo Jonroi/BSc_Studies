@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hours to Minutes Converter</title>
+  </head>
+  <body>
+    <h1>Hours to Minutes Converter</h1>
+
+    <input
+      type="text"
+      id="InputTime"
+      placeholder="Enter hours (e.g., 3,40 or 03.20)" />
+    <button onclick="convertToMinutes()">Convert to Minutes</button>
+
+    <p id="result"></p>
+
+    <script>
+      const convertToMinutesFormat = (hoursInHundredths) => {
+        const normalizedInput = hoursInHundredths.toString().replace(',', '.');
+        const decimalHours = parseFloat(normalizedInput);
+
+        const hours = Math.floor(decimalHours);
+        const decimalPart = decimalHours - hours;
+
+        const minutes = Math.round(decimalPart * 60);
+
+        const formattedHours = hours.toString();
+        const formattedMinutes = minutes.toString().padStart(2, '0');
+
+        return `${formattedHours}:${formattedMinutes}`;
+      };
+
+      const convertToMinutes = () => {
+        const inputValue = document.getElementById('InputTime').value.trim();
+
+        if (!inputValue) {
+          document.getElementById('result').textContent =
+            'Please enter a time value.';
+          return;
+        }
+
+        try {
+          const convertedTime = convertToMinutesFormat(inputValue);
+          document.getElementById(
+            'result',
+          ).textContent = `${inputValue} hours is in hours and minutes equal to ${convertedTime}`;
+        } catch (error) {
+          document.getElementById('result').textContent =
+            'Invalid input format. Please use formats like 3,40 or 03.20';
+        }
+      };
+    </script>
+  </body>
+</html>

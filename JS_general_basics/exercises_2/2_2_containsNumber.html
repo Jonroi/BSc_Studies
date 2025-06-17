@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contains Number</title>
+  </head>
+  <body>
+    <h1>Contains Number</h1>
+
+    <input type="number" id="aNumber" placeholder="Number" />
+    <button onclick="checkContainsNumber()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+      checkContainsNumber = () => {
+        const ArrayOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const aNumber = parseInt(document.getElementById('aNumber').value);
+
+        if (ArrayOfNumbers.includes(aNumber)) {
+          document.getElementById('result').textContent =
+            'Number ' + aNumber + ' is contained in the array';
+        } else {
+          document.getElementById('result').textContent =
+            'Number ' + aNumber + ' is not contained in the array';
+        }
+      };
+    </script>
+  </body>
+</html>

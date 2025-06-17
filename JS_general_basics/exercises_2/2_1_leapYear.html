@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Leap Year</title>
+  </head>
+  <body>
+    <h1>Leap Year Calculator</h1>
+
+    <input type="number" id="year" placeholder="Year" />
+    <button onclick="checkLeapYear()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+      checkLeapYear = () => {
+        const year = parseInt(document.getElementById('year').value);
+        const leapYear = year % 4 === 0 && year % 100 !== 0;
+
+        if (leapYear) {
+          document.getElementById('result').textContent =
+            'Year ' + year + ' is a leap year';
+        } else {
+          document.getElementById('result').textContent =
+            'Year ' + year + ' is not a leap year';
+        }
+      };
+    </script>
+  </body>
+</html>
