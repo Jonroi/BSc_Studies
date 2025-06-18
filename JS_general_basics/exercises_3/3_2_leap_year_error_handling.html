@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Leap Year</title>
+    <title>Leap Year Original</title>
   </head>
   <body>
     <h1>Leap Year Calculator</h1>
 
     <input type="text" id="year" placeholder="Year" />
-    <button onclick="tryIsLeapYear()">Check</button>
+    <button onclick="checkLeapYear()">Check</button>
 
     <p id="result"></p>
 
     <script>
-      function isLeapYear(yearInput) {
-        if (yearInput === '') {
-          throw new Error('Missing argument year error');
-        }
-
-        const year = parseInt(yearInput);
-        if (isNaN(year) || yearInput != year) {
-          throw new Error('Non-integer argument year error');
-        }
-
-        return year % 4 === 0 && year % 100 !== 0;
-      }
-
-      function tryIsLeapYear() {
+      function checkLeapYear() {
         try {
           const yearInput = document.getElementById('year').value;
-          const isLeap = isLeapYear(yearInput);
+
+          if (yearInput === '') {
+            throw new Error('Missing argument year error');
+          }
+
           const year = parseInt(yearInput);
+          if (isNaN(year) || yearInput != year) {
+            throw new Error('Non-integer argument year error');
+          }
+
+          const leapYear = year % 4 === 0 && year % 100 !== 0;
 
           document.getElementById('result').textContent =
             'Year ' +
             year +
-            (isLeap ? ' is a leap year' : ' is not a leap year');
+            (leapYear ? ' is a leap year' : ' is not a leap year');
         } catch (error) {
           console.error(error.message);
           document.getElementById('result').textContent = error.message;

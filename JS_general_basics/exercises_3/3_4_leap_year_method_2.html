@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Leap Year</title>
+    <title>Leap Year Method 2</title>
   </head>
   <body>
     <h1>Leap Year Calculator</h1>
@@ -13,24 +13,24 @@
 
     <script>
       function isLeapYear(yearInput) {
-        if (yearInput === '') {
-          throw new Error('Missing argument year error');
-        }
-
         const year = parseInt(yearInput);
-        if (isNaN(year) || yearInput != year) {
-          throw new Error('Non-integer argument year error');
-        }
-
         return year % 4 === 0 && year % 100 !== 0;
       }
 
       function tryIsLeapYear() {
         try {
           const yearInput = document.getElementById('year').value;
-          const isLeap = isLeapYear(yearInput);
-          const year = parseInt(yearInput);
 
+          if (yearInput === '') {
+            throw new Error('Missing argument year error');
+          }
+
+          const year = parseInt(yearInput);
+          if (isNaN(year) || yearInput != year) {
+            throw new Error('Non-integer argument year error');
+          }
+
+          const isLeap = isLeapYear(yearInput);
           document.getElementById('result').textContent =
             'Year ' +
             year +
