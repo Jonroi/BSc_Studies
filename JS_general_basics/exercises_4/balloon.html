@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balloon</title>
+  </head>
+  <body>
+    <div id="balloon"><p>🎈</p></div>
+    <div id="exploded" style="display: none; font-size: 60px">💥</div>
+  </body>
+  <script>
+    const balloon = document.getElementById('balloon');
+    const balloonEmoji = balloon.querySelector('p');
+    const exploded = document.getElementById('exploded');
+    let fontSize = 30; // initial size in px
+    const maxSize = 100; // px, explosion threshold
+    const minSize = 10; // px, minimum size
+    function updateBalloon() {
+      balloonEmoji.style.fontSize = fontSize + 'px';
+    }
+    updateBalloon();
+    function handleKey(e) {
+      if (exploded.style.display === 'block') return;
+      if (e.key === 'ArrowUp') {
+        fontSize = Math.round(fontSize * 1.1);
+        if (fontSize > maxSize) {
+          balloon.style.display = 'none';
+          exploded.style.display = 'block';
+          document.removeEventListener('keydown', handleKey);
+          return;
+        }
+        updateBalloon();
+        e.preventDefault();
+      } else if (e.key === 'ArrowDown') {
+        fontSize = Math.round(fontSize * 0.9);
+        if (fontSize < minSize) fontSize = minSize;
+        updateBalloon();
+        e.preventDefault();
+      }
+    }
+    document.addEventListener('keydown', handleKey);
+  </script>
+</html>
