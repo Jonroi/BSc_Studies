@@ -122,6 +122,34 @@ This section contains progressive JavaScript exercises covering fundamental conc
 - **Description:** Interactive page with buttons to change background color between blue, gray, and reset to white
 - **Concepts:** CSS classes, DOM manipulation, event listeners
 
+### Exercise Set 5: Form Handling and HTTP Requests
+
+**Location:** `JS_general_basics/exercises_5/`
+
+#### Exercise 5.1 - Content Negotiation
+
+- **File:** `contentNegotiation.html`
+- **Description:** Demonstrates HTTP content negotiation by fetching the same resource in different formats (text/plain, text/html, application/json, application/rainbows+unicorns)
+- **Concepts:** Fetch API, HTTP headers, Accept header, Promise handling, status codes
+
+#### Exercise 5.2 - Form Handling
+
+- **File:** `form.html`
+- **Description:** Form handling and validation with user input processing
+- **Concepts:** Form events, input validation, DOM manipulation
+
+#### Exercise 5.3 - Local Storage
+
+- **File:** `localstorage.html`
+- **Description:** Demonstrates browser local storage functionality for data persistence
+- **Concepts:** localStorage API, data persistence, browser storage
+
+#### Exercise 5.4 - Event Prevention
+
+- **File:** `prevent.html`
+- **Description:** Shows how to prevent default browser behavior for events
+- **Concepts:** Event prevention, preventDefault(), event handling
+
 ## 🚀 Getting Started
 
 1. **Clone the repository:**
