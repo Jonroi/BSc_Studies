@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form id="userContact">
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+    </form>
+    <form id="radioInput">
+      <input type="radio" name="radioInput" value="1" />
+      <input type="radio" name="radioInput" value="2" />
+      <input type="radio" name="radioInput" value="3" />
+    </form>
+    <form id="feedback">
+      <input type="text" placeholder="Feedback" />
+    </form>
+    <button id="submit">Submit</button>
+
+    <script>
+      document.getElementById('submit').addEventListener('click', function () {
+        const userContactForm = document.getElementById('userContact');
+        const name = userContactForm.querySelector('input[type="text"]').value;
+        const email = userContactForm.querySelector(
+          'input[type="email"]',
+        ).value;
+        const password = userContactForm.querySelector(
+          'input[type="password"]',
+        ).value;
+
+        const radioInputForm = document.getElementById('radioInput');
+        const selectedRadio = radioInputForm.querySelector(
+          'input[name="radioInput"]:checked',
+        );
+        const radioValue = selectedRadio ? selectedRadio.value : 'No selection';
+
+        const feedbackForm = document.getElementById('feedback');
+        const feedback = feedbackForm.querySelector('input[type="text"]').value;
+
+        alert(
+          `Form submitted!\nName: ${name}\nEmail: ${email}\nRadio: ${radioValue}\nFeedback: ${feedback}`,
+        );
+      });
+    </script>
+  </body>
+</html>
