@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body>
+    <button id="b1">Get members</button>
+    <div id="result"></div>
+  </body>
+</html>
+
+<script>
+  const getMembers = (count) =>
+    new Promise((resolve, reject) => {
+      const apiUrl = `https://api.randomuser.me/?nat=FI&results=${count}`;
+      const request = new XMLHttpRequest();
+      request.open('GET', apiUrl);
+      request.onload = () => {
+        if (request.status === 200) {
+          resolve(JSON.parse(request.responseText));
+        } else {
+          reject(new Error('Request failed'));
+        }
+      };
+      request.onerror = () => reject(new Error('Network error'));
+      request.send();
+    });
+
+  var displayFiveFinnishFakeMembers = () => {
+    getMembers(5).then((data) => {
+      console.log(data);
+    });
+  };
+
+  function initiateApplication() {
+    var requireBtn = document.querySelector('#b1');
+    requireBtn.addEventListener('click', displayFiveFinnishFakeMembers);
+  }
+
+  window.addEventListener('load', () => {
+    initiateApplication();
+  });
+</script>
