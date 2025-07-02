@@ -1,0 +1,12 @@
+{
+  "name": "exercises_6",
+  "version": "1.0.0",
+  "description": "module handling",
+  "main": "pricelist.js",
+  "type": "module",
+  "scripts": {
+    "start": "node usePricelist.js"
+  },
+  "author": "joni roine",
+  "license": "ISC"
+}
