@@ -25,6 +25,9 @@ This repository contains my Bachelor's degree studies and projects, specifically
   - `exercises_7/` - React basics and component practice
     - `hello_world/` - _First React app: simple Hello World component._
     - `unordered_list/` - _React component that renders an unordered list from an array._
+  - `exercises_8/` - React component composition and props
+    - `passing/` - _React app demonstrating prop passing between components._
+    - `property/` - _React app with Hello component converted to arrow function and HelloList container._
 
 ## 🎯 Exercise Sets
 
@@ -122,17 +125,31 @@ This repository contains my Bachelor's degree studies and projects, specifically
 - `unordered_list/` - React app rendering an unordered list from an array using components
   - _Renders a list of SQL threats using a React component and props._
 
+### Exercise Set 8: React Component Composition
+
+**Location:** `JS_general_basics/exercises_8/`
+
+- `passing/` - React prop passing demonstration
+  - _Shows how to pass data between React components using props._
+- `property/` - React component composition with arrow functions
+  - _Hello component converted to arrow function syntax._
+  - _HelloList container component that renders multiple Hello components._
+  - _Demonstrates component reusability and composition patterns._
+
 ## 🚀 Getting Started
 
 1. **Clone the repository:**
+
    ```bash
    git clone [repository-url]
    cd BSc_Studies
    ```
+
 2. **Run HTML files:**
    - Open any `.html` file in a web browser
    - For interactive exercises, use a local server for best experience
 3. **Run JavaScript files:**
+
    ```bash
    node JS_general_basics/exercises_X/exercise_name.js
    ```
@@ -146,7 +163,8 @@ The exercises follow a logical progression:
 3. **Error Handling** - Robust programming practices
 4. **Interactive Applications** - Real-world web development
 5. **Modern JavaScript** - AJAX, Promises, Modules, and modular code
-6. **React** - Component-based UI development
+6. **React Basics** - Component-based UI development
+7. **React Composition** - Component reuse, props, and arrow functions
 
 ## 🛠️ Technologies Used
 
