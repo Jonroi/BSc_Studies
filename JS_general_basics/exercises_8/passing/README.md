@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Renovation Project Task Components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This exercise demonstrates how to build modular React components for managing renovation project tasks, following the Eloquent JavaScript methodology.
 
-## Available Scripts
+## Components
 
-In the project directory, you can run:
+### Task
 
-### `npm start`
+Displays a single renovation task, including its name, required tools, and step-by-step instructions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Props:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `task` (object): The task to display. Should include at least the following fields:
+  - `name` (string): Task name
+  - `tools` (array of strings): Tools required
+  - `steps` (array of strings): Step-by-step instructions
 
-### `npm test`
+**Example usage:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```js
+import { Task } from './components/task'
 
-### `npm run build`
+const exampleTask = {
+  name: 'Paint walls',
+  tools: ['roller', 'paint', 'tape'],
+  steps: ['Clean the wall', 'Tape edges', 'Apply paint']
+}
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<Task task={exampleTask} />
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### TaskList
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Renders a list of all tasks in the renovation project using the Task component.
 
-### `npm run eject`
+**Props:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `tasks` (array of objects): List of task objects as described above.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Example usage:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```js
+import { TaskList } from './components/taskList';
+import { tasks } from './data/tasks';
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<TaskList tasks={tasks} />;
+```
 
-## Learn More
+## Example Data Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```js
+export const tasks = [
+  {
+    id: 1,
+    name: 'Paint walls',
+    tools: ['roller', 'paint', 'tape'],
+    steps: ['Clean the wall', 'Tape edges', 'Apply paint'],
+  },
+  {
+    id: 2,
+    name: 'Install floor',
+    tools: ['saw', 'hammer', 'measuring tape'],
+    steps: ['Remove old floor', 'Measure and cut', 'Install new floor'],
+  },
+];
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## How to Use
 
-### Code Splitting
+1. Place your task data in a file (e.g. `src/data/tasks.jsx`).
+2. Import and use the `TaskList` component in your main app, passing the data as a prop.
+3. Each task will be displayed with its name, tools, and steps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Tämä README noudattaa Eloquent JavaScript -opetusmetodia ja auttaa ymmärtämään komponenttipohjaista ajattelua Reactissa.
