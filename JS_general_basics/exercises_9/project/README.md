@@ -1,36 +1,3 @@
-# React Recipes App
-
-## How to run this project
-
-1. Install dependencies:
-
-   ```sh
-   npm install
-   ```
-
-2. Start the development server:
-
-   ```sh
-   npm start
-   ```
-
-3. Build for production:
-
-   ```sh
-   npm run build
-   ```
-
-The app will be available at [http://localhost:8080](http://localhost:8080) by default.
-
----
-
-## Cursor Rules for README files
-
-- Fenced code blocks (```) tulee aina ympäröidä tyhjillä riveillä ennen ja jälkeen lohkon (MD031)
-- Käytä aina linkkimuotoa (esim. [http://localhost:8080](http://localhost:8080)) paljaiden URLien sijaan (MD034)
-- Vain yksi H1-tason otsikko (#) per README (MD025)
-- Noudata muutenkin markdownlintin suosituksia
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
