@@ -28,6 +28,9 @@ This repository contains my Bachelor's degree studies and projects, specifically
   - `exercises_8/` - React component composition and props
     - `passing/` - _React app demonstrating prop passing between components._
     - `property/` - _React app with Hello component converted to arrow function and HelloList container._
+  - `exercises_9/` - React build comparison
+    - `react-webpack-starter/` - Käsin rakennettu React-projekti, jossa käytetään omaa webpack- ja Babel-konfiguraatiota
+    - `project/` - Sama sovellus siirretty Create React App -ympäristöön
 
 ## 🎯 Exercise Sets
 
@@ -136,6 +139,13 @@ This repository contains my Bachelor's degree studies and projects, specifically
   - _HelloList container component that renders multiple Hello components._
   - _Demonstrates component reusability and composition patterns._
 
+### Exercise Set 9: React build comparison
+
+**Location:** `JS_general_basics/exercises_9/`
+
+- `react-webpack-starter/` - Käsin rakennettu React-projekti, jossa käytetään omaa webpack- ja Babel-konfiguraatiota
+- `project/` - Sama sovellus siirretty Create React App -ympäristöön
+
 ## 🚀 Getting Started
 
 1. **Clone the repository:**
@@ -185,3 +195,31 @@ The exercises follow a logical progression:
 ---
 
 _This repository will be updated throughout my studies with additional materials and projects._
+
+## exercises_9: React Build Comparison
+
+This directory contains two different approaches to building a simple React application:
+
+### 1. react-webpack-starter
+
+- A manually configured React project using custom webpack and Babel configuration
+- Demonstrates how to build a modern React app "from scratch" without using a boilerplate tool
+- All build and configuration files are visible and fully customizable
+
+### 2. project (Create React App)
+
+- The same application migrated to a Create React App (CRA) environment
+- CRA hides the build and configuration files, allowing the developer to focus on application code
+- The application works and looks exactly the same as in the manually built version
+
+Both projects render a simple component:
+
+```
+<h1>Hello, React with Webpack!</h1>
+```
+
+(or in the CRA version: `Hello, React with CRA!`)
+
+---
+
+These projects allow you to compare how a React application can be built both manually and with a boilerplate tool, and to understand the significance of the build process in modern web development.
