@@ -1,11 +1,11 @@
-import Hello from './components/hello';
+import HelloList from './components/helloList';
 import './App.css';
 
 function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <Hello message='Hello World!' />
+        <HelloList />
       </header>
     </div>
   );

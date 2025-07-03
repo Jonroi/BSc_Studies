@@ -1,3 +1,6 @@
-export default function Hello({ message }) {
+const Hello = ({ message }) => {
     return <h1>{message}</h1>;
 }
+
+export default Hello;
+
