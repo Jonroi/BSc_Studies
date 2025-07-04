@@ -1,10 +1,10 @@
 # BSc Studies - JavaScript General Basics
 
-This repository contains my Bachelor's degree studies and projects, specifically focusing on JavaScript fundamentals and web development exercises. All code and exercises are based on the methodology and concepts from [Eloquent JavaScript (4th edition, 2024)](https://eloquentjavascript.net/) by Marijn Haverbeke.
+This repository contains my Bachelor's degree studies and projects, specifically focusing on JavaScript fundamentals and web development exercises. All code and exercises are based on the methodology and concepts from [Eloquent JavaScript (4th edition, 2024)](https://eloquentjavascript.net/) by Marijn Haverbeke and [Learning React (2nd edition)](https://www.oreilly.com/library/view/learning-react-2nd/9781492051718/) by Alex Banks and Eve Porcello.
 
 ## 📚 Project Structure
 
-- `JS_general_basics/` - Main directory containing all exercises
+- `JS_general_basics/` - Main directory containing all exercises (1-10)
   - `exercises_1/` - Basic JavaScript fundamentals (loops, conditionals, arrays)
     - _Practice with for-loops, conditionals, and array basics._
   - `exercises_2/` - HTML integration & functions (DOM manipulation, forms)
@@ -29,10 +29,12 @@ This repository contains my Bachelor's degree studies and projects, specifically
     - `passing/` - _React app demonstrating prop passing between components._
     - `property/` - _React app with Hello component converted to arrow function and HelloList container._
   - `exercises_9/` - React build comparison
-    - `react-webpack-starter/` - Käsin rakennettu React-projekti, jossa käytetään omaa webpack- ja Babel-konfiguraatiota
-    - `project/` - Sama sovellus siirretty Create React App -ympäristöön
+    - `react-webpack-starter/` - _Manual React project with custom webpack and Babel configuration._
+    - `project/` - _Same application moved to Create React App environment._
+  - `exercises_10/` - React State Management (Final Project)
+    - `star-rating/` - _Complete React state management project with star rating system and color list._
 
-## 🎯 Exercise Sets
+## 🎯 Exercise Sets (1-10)
 
 ### Exercise Set 1: Basic JavaScript Fundamentals
 
@@ -139,12 +141,54 @@ This repository contains my Bachelor's degree studies and projects, specifically
   - _HelloList container component that renders multiple Hello components._
   - _Demonstrates component reusability and composition patterns._
 
-### Exercise Set 9: React build comparison
+### Exercise Set 9: React Build Comparison
 
 **Location:** `JS_general_basics/exercises_9/`
 
-- `react-webpack-starter/` - Käsin rakennettu React-projekti, jossa käytetään omaa webpack- ja Babel-konfiguraatiota
-- `project/` - Sama sovellus siirretty Create React App -ympäristöön
+- `react-webpack-starter/` - Manual React project with custom webpack and Babel configuration
+  - _Simple "Hello, React with Webpack!" app built from scratch._
+- `project/` - Same application moved to Create React App environment
+  - _Same "Hello, React with CRA!" app using Create React App tooling._
+  - _Demonstrates the difference between manual setup and CRA convenience._
+
+### Exercise Set 10: React State Management (Final Project)
+
+**Location:** `JS_general_basics/exercises_10/star-rating/`
+
+This is the **final and most comprehensive project** in this repository, demonstrating advanced React concepts:
+
+#### **Star Rating System**
+
+- **Static Stars** - Initial implementation with fixed star display
+- **createArray Function** - Utility function for generating arrays (Learning React methodology)
+- **Modular Components** - Separate Star component in its own module
+- **Advanced Reusability** - Flexible props and callback functions
+- **Interactive Rating** - Click stars to change rating with state management
+
+#### **Component Tree State Management**
+
+- **RatingApp** - Parent component managing multiple rating systems
+- **State Down Pattern** - Demonstrates "sending state down a component tree"
+- **Centralized State** - Single source of truth for all rating data
+- **Callback Functions** - Child-to-parent communication pattern
+
+#### **ColorList Application**
+
+- **Color Component** - Individual color display with rating system
+- **AddColorForm** - Form for adding new colors with validation
+- **ColorList** - Main component managing color collection
+- **CRUD Operations** - Create, Read, Update, Delete color functionality
+- **Dynamic Lists** - Array manipulation and rendering
+
+#### **Key Learning Outcomes**
+
+- **State Management** - Understanding when and where to maintain state
+- **Component Architecture** - Proper separation of concerns
+- **Props vs State** - Clear distinction between properties and state
+- **Reusable Components** - Building flexible, reusable UI components
+- **Event Handling** - Managing user interactions and form submissions
+- **List Rendering** - Dynamic rendering of component lists
+- **React Developer Tools** - Debugging and testing React applications
 
 ## 🚀 Getting Started
 
@@ -156,25 +200,38 @@ This repository contains my Bachelor's degree studies and projects, specifically
    ```
 
 2. **Run HTML files:**
+
    - Open any `.html` file in a web browser
    - For interactive exercises, use a local server for best experience
+
 3. **Run JavaScript files:**
 
    ```bash
    node JS_general_basics/exercises_X/exercise_name.js
    ```
 
-## 📖 Learning Progression
+4. **Run React projects:**
+
+   ```bash
+   cd JS_general_basics/exercises_X/project_name
+   npm install
+   npm start
+   ```
+
+## 📖 Learning Progression (Exercises 1-10)
 
 The exercises follow a logical progression:
 
-1. **Basic JavaScript** - Variables, loops, conditionals
-2. **HTML Integration** - DOM manipulation, user input
-3. **Error Handling** - Robust programming practices
-4. **Interactive Applications** - Real-world web development
-5. **Modern JavaScript** - AJAX, Promises, Modules, and modular code
-6. **React Basics** - Component-based UI development
-7. **React Composition** - Component reuse, props, and arrow functions
+1. **Basic JavaScript** (Exercise 1) - Variables, loops, conditionals
+2. **HTML Integration** (Exercise 2) - DOM manipulation, user input
+3. **Error Handling** (Exercise 3) - Robust programming practices
+4. **Interactive Applications** (Exercise 4) - Real-world web development
+5. **Form Handling & HTTP** (Exercise 5) - Form submission, event prevention, local storage
+6. **Modern JavaScript** (Exercise 6) - AJAX, Promises, Modules, and modular code
+7. **React Basics** (Exercise 7) - Component-based UI development
+8. **React Composition** (Exercise 8) - Component reuse, props, and arrow functions
+9. **React Build Tools** (Exercise 9) - Understanding build processes and tooling
+10. **React State Management** (Exercise 10) - Advanced state management and component architecture
 
 ## 🛠️ Technologies Used
 
@@ -182,44 +239,32 @@ The exercises follow a logical progression:
 - **HTML5**
 - **CSS3**
 - **Node.js** (for running .js files)
-- **React** (for exercises_7)
+- **React** (for exercises 7-10)
+- **Create React App** (for React projects)
+- **Font Awesome** (for icons in React projects)
+- **Webpack & Babel** (for manual React setup)
 
 ## 📝 Notes
 
-- All exercises are self-contained and can be run independently
+- All exercises (1-10) are self-contained and can be run independently
 - HTML files include embedded CSS and JavaScript for simplicity
 - Error handling is progressively introduced throughout the course
 - Each exercise builds upon concepts from previous exercises
-- All code follows Eloquent JavaScript methodology and modern best practices
+- All code follows Eloquent JavaScript and Learning React methodology
+- Modern best practices are emphasized throughout
+- React projects (exercises 7-10) demonstrate real-world development patterns
+
+## 🎓 Course Completion
+
+This repository represents the complete JavaScript General Basics course for my Bachelor's degree studies. All 10 exercise sets demonstrate progressive learning, with the final project (exercise 10) showing mastery of:
+
+- **React Component Architecture**
+- **State Management Patterns**
+- **Modern JavaScript Development**
+- **Interactive Web Application Development**
+- **Code Organization and Modularity**
 
 ---
 
-_This repository will be updated throughout my studies with additional materials and projects._
-
-## exercises_9: React Build Comparison
-
-This directory contains two different approaches to building a simple React application:
-
-### 1. react-webpack-starter
-
-- A manually configured React project using custom webpack and Babel configuration
-- Demonstrates how to build a modern React app "from scratch" without using a boilerplate tool
-- All build and configuration files are visible and fully customizable
-
-### 2. project (Create React App)
-
-- The same application migrated to a Create React App (CRA) environment
-- CRA hides the build and configuration files, allowing the developer to focus on application code
-- The application works and looks exactly the same as in the manually built version
-
-Both projects render a simple component:
-
-```
-<h1>Hello, React with Webpack!</h1>
-```
-
-(or in the CRA version: `Hello, React with CRA!`)
-
----
-
-These projects allow you to compare how a React application can be built both manually and with a boilerplate tool, and to understand the significance of the build process in modern web development.
+**Status: COMPLETED** ✅  
+_This repository contains all 10 completed exercise sets for the JavaScript General Basics course._
